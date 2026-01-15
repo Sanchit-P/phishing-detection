@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: sans-serif; width: 320px; padding: 15px; background: #fdfdfd; }
+        .label { font-weight: bold; padding: 4px; border-radius: 4px; color: white; display: inline-block; margin-top: 5px;}
+        .phishing { background: #e74c3c; } .suspicious { background: #f39c12; } .safe { background: #2ecc71; }
+        
+        /* NEW: Counter Styles */
+        .counter-container { display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+        .counter-item { text-align: center; flex: 1; }
+        .counter-num { display: block; font-size: 18px; font-weight: bold; }
+        .counter-label { font-size: 10px; text-transform: uppercase; color: #666; }
+        
+        #status { color: #666; font-size: 12px; margin: 10px 0; }
+        pre { background: #eee; padding: 8px; font-size: 11px; max-height: 100px; overflow: auto; border-radius: 4px; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <h3>PhishGuard Dashboard</h3>
+
+    <div class="counter-container">
+        <div class="counter-item">
+            <span id="cnt-phishing" class="counter-num" style="color: #e74c3c;">0</span>
+            <span class="counter-label">Phishing</span>
+        </div>
+        <div class="counter-item">
+            <span id="cnt-suspicious" class="counter-num" style="color: #f39c12;">0</span>
+            <span class="counter-label">Suspicious</span>
+        </div>
+        <div class="counter-item">
+            <span id="cnt-safe" class="counter-num" style="color: #2ecc71;">0</span>
+            <span class="counter-label">Safe</span>
+        </div>
+    </div>
+
+    <button id="scanBtn" style="width: 100%; padding: 10px; cursor: pointer;">Analyze Email</button>
+    
+    <div id="status">Ready.</div>
+    
+    <div id="results" class="hidden">
+        <div><strong>Sender:</strong> <span id="sender"></span></div>
+        <div id="verdict" class="label"></div>
+        <p id="reason" style="font-size: 13px;"></p>
+        <pre id="preview"></pre>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+Category,Keyword,Typical Context
+Urgency,Immediate action required,Subject line or opening
+Urgency,Urgent: Your account will be closed,Subject line
+Urgency,Final notice,Subject line
+Urgency,Last warning,Subject line
+Urgency,Act now to avoid suspension,Email body
+Urgency,Response needed within 24 hours,Email body
+Urgency,Deadline today,Subject line
+Urgency,Action required: Confirm your details,Subject line
+Urgency,Critical security alert,Subject line
+Urgency,Your account has been restricted,Email body
+Urgency,Unauthorized access detected,Subject line
+Urgency,Suspicious activity on your account,Subject line
+Urgency,Failure to respond will result in deletion,Email body
+Urgency,Time sensitive request,Subject line
+Urgency,Payment overdue,Subject line
+Urgency,Legal action pending,Email body
+Urgency,Court summons,Subject line
+Urgency,Notice of debt,Subject line
+Urgency,Emergency contact updated,Email body
+Urgency,Account locked,Subject line
+Urgency,Security breach notification,Subject line
+Urgency,Verify now,Call to action
+Urgency,Limited time offer,Email body
+Urgency,Expiring soon,Email body
+Urgency,Immediate update required,Subject line
+Financial,You have a refund pending,Subject line
+Financial,Invoice attached,Subject line
+Financial,Payment processed successfully,Email body
+Financial,Wire transfer confirmation,Subject line
+Financial,Tax refund notification,Subject line
+Financial,Your payroll has been delayed,Email body
+Financial,Unclaimed funds,Email body
+Financial,Beneficiary of a will,Email body
+Financial,Grant approval notice,Subject line
+Financial,Bank statement attached,Subject line
+Financial,Credit card limit exceeded,Subject line
+Financial,New transaction on your card,Email body
+Financial,Confirm your billing address,Email body
+Financial,Update payment method,Call to action
+Financial,Subscription renewal,Subject line
+Financial,Purchase confirmation for [Expensive Item],Subject line
+Financial,Overdue invoice #12345,Subject line
+Financial,Gift card reward,Subject line
+Financial,Coupon code inside,Subject line
+Financial,Investment opportunity,Email body
+Financial,Crypto wallet recovery,Subject line
+Financial,Bitcoin transaction pending,Email body
+Financial,Inheritance claim,Email body
+Financial,Loan approval,Subject line
+Financial,Mortgage update,Subject line
+Security/Account,Verify your identity,Call to action
+Security/Account,Log in to confirm,Call to action
+Security/Account,Reset your password,Subject line
+Security/Account,Security questions changed,Email body
+Security/Account,Email account verification,Subject line
+Security/Account,New device logged in,Subject line
+Security/Account,Location: Russia/China,Login details info
+Security/Account,Confirm your email address,Email body
+Security/Account,Two-factor authentication code,Subject line
+Security/Account,Account recovery requested,Subject line
+Security/Account,Update your profile,Email body
+Security/Account,Privacy policy update,Subject line
+Security/Account,Terms and conditions change,Subject line
+Security/Account,IT Helpdesk: System upgrade,Subject line
+Security/Account,Admin: Mailbox full,Subject line
+Security/Account,Synchronize your folders,Email body
+Security/Account,Re-validate your credentials,Email body
+Security/Account,Access from unknown IP,Email body
+Security/Account,Identity theft protection,Email body
+Security/Account,Suspicious login attempt,Subject line
+Security/Account,Secure your account,Call to action
+Security/Account,Password policy change,Email body
+Security/Account,Software update required,Subject line
+Security/Account,Patch for security vulnerability,Email body
+Security/Account,Official Microsoft/Google/Apple Support,Sender Name
+Generic/Suspicious,Dear Customer,Salutation
+Generic/Suspicious,Valued Client,Salutation
+Generic/Suspicious,Click here,Link text
+Generic/Suspicious,Follow this link,Link text
+Generic/Suspicious,Download attachment,Call to action
+Generic/Suspicious,Document scanned,Subject line
+Generic/Suspicious,Internal memo,Subject line
+Generic/Suspicious,Message for you,Subject line
+Generic/Suspicious,Please see attached,Email body
+Generic/Suspicious,You have (1) new message,Subject line
+Generic/Suspicious,Voice mail notification,Subject line
+Generic/Suspicious,Missed call alert,Subject line
+Generic/Suspicious,Delivery failed,Subject line
+Generic/Suspicious,Package tracking update,Subject line
+Generic/Suspicious,UPS/FedEx/DHL delivery,Sender/Subject
+Generic/Suspicious,Job offer details,Subject line
+Generic/Suspicious,Work from home opportunity,Email body
+Generic/Suspicious,Amazon order update,Subject line
+Generic/Suspicious,Netflix billing error,Subject line
+Generic/Suspicious,PayPal account limited,Subject line
+Generic/Suspicious,Microsoft 365 update,Subject line
+Generic/Suspicious,Zoom meeting invite,Subject line
+Generic/Suspicious,DocuSign: Action required,Subject line
+Generic/Suspicious,Sign document,Call to action
+Generic/Suspicious,Shared file via OneDrive/Dropbox,Subject line
+Workplace,New shared folder from HR,Subject line
+Workplace,Action Required: Your employee benefits,Subject line
+Workplace,Review updated company handbook,Email body
+Workplace,Slack: New sign-in detected,Subject line
+Workplace,Microsoft Teams: Missed message,Subject line
+Workplace,Zoom: Meeting recording is ready,Subject line
+Workplace,Payroll: Update your direct deposit,Subject line
+Workplace,IT Department: Mandatory system reboot,Subject line
+Workplace,Internal Security Audit - Action needed,Subject line
+Workplace,New message from CEO [Name],Subject line
+Workplace,Mandatory employee survey,Email body
+Workplace,Expense report rejected,Subject line
+Workplace,Pending signature on W-2 form,Email body
+Workplace,LinkedIn: Someone viewed your profile,Subject line
+Workplace,LinkedIn: You have a new connection request,Subject line
+Workplace,Shared Excel document: "Salaries",Subject line
+Workplace,Resignation letter from [Employee Name],Subject line
+Workplace,Voicemail from [Company Name] receptionist,Subject line
+Workplace,Urgent: Please review these specs,Email body
+Workplace,New document in your Dropbox,Subject line
+Workplace,Google Drive: Document shared with you,Subject line
+Workplace,Internal Directory Update,Subject line
+Workplace,Corporate travel booking confirmation,Subject line
+Workplace,Security training incomplete,Email body
+Workplace,New company policy on remote work,Subject line
+Financial,Wire Transfer #98234 pending,Subject line
+Financial,Unusual login on your [Bank Name] account,Subject line
+Financial,Credit Card Charge: $1,249.99,Subject line
+Financial,Tax ID verification needed,Email body
+Financial,Your IRS tax refund is ready,Subject line
+Financial,Potential fraud on your debit card,Subject line
+Financial,Account overdraft protection notice,Email body
+Financial,Your loan application was approved,Subject line
+Financial,Crypto: Unusual activity detected,Subject line
+Financial,Wallet sync required to avoid loss,Call to action
+Financial,Metamask: Secure your seed phrase,Subject line
+Financial,Coinbase: Temporary account hold,Subject line
+Financial,Investment portfolio update,Subject line
+Financial,Zelle: Payment received from [Name],Subject line
+Financial,Venmo: You have a new balance,Subject line
+Financial,CashApp: Verify your identity for $500,Subject line
+Financial,Your credit score has dropped,Subject line
+Financial,Past due: Utility bill payment,Subject line
+Financial,Property tax assessment notice,Email body
+Financial,Claim your loyalty points,Email body
+Financial,Your annual bonus details,Subject line
+Financial,New electronic statement available,Subject line
+Financial,Transfer failed: Retry now,Call to action
+Financial,Dispute filed against your account,Email body
+Financial,Confirm your bank routing number,Email body
+Social Engineering,Help me! I am stranded,Subject line
+Social Engineering,Can you do me a favor?,Email body
+Social Engineering,Are you at your desk?,Email body (CEO Fraud)
+Social Engineering,I need you to buy gift cards,Email body
+Social Engineering,Discreet photo attached,Subject line
+Social Engineering,I know what you did...,Email body (Blackmail)
+Social Engineering,Your computer has been hacked,Subject line
+Social Engineering,Webcam footage recorded,Email body (Sextortion)
+Social Engineering,Police report #8812,Subject line
+Social Engineering,Your child is in trouble,Subject line
+Social Engineering,Winner of the International Lottery,Subject line
+Social Engineering,Donation request for [Disaster Name],Email body
+Social Engineering,Verification of inheritance,Email body
+Social Engineering,Exclusive invite to [Event],Subject line
+Social Engineering,I found your lost wallet,Subject line
+Social Engineering,Update your COVID-19 status,Email body
+Social Engineering,Free subscription for 1 year,Subject line
+Social Engineering,Unsubscribe from all emails,Link text (Phish link)
+Social Engineering,Private message from a secret admirer,Subject line
+Social Engineering,Your account was used on another continent,Email body
+Technical Spoof,SPF record failure,Subject line
+Technical Spoof,DKIM signature missing,Email body
+Technical Spoof,MX Record Update Required,Subject line
+Technical Spoof,Cpanel: Disk space full,Subject line
+Technical Spoof,SSL Certificate Expiration,Subject line
+Technical Spoof,Server migration in progress,Email body
+Technical Spoof,DNS settings modified,Subject line
+Technical Spoof,API Key revoked,Subject line
+E-commerce,Your Amazon order has been cancelled,Subject line
+E-commerce,Shipping address change confirmation,Email body
+E-commerce,Problem with your recent purchase,Subject line
+E-commerce,Your package is held at our warehouse,Subject line
+E-commerce,Refund for order #9921-A,Subject line
+E-commerce,Verify your buyer account,Call to action
+E-commerce,New message from seller,Subject line
+E-commerce,Discount code for your cart items,Email body
+E-commerce,Unusual activity on your eBay account,Subject line
+E-commerce,Your Etsy shop has been suspended,Subject line
+E-commerce,Shopify: Update your payout method,Subject line
+Government,IRS: Tax deficiency notice,Subject line
+Government,Social Security Number suspension,Subject line
+Government,Official notice of jury duty,Subject line
+Government,Department of Labor: Unemployment claim,Subject line
+Government,COVID-19 relief fund application,Email body
+Government,Passport renewal application received,Subject line
+Government,DMV: Unpaid traffic violation,Subject line
+Government,FBI: Investigation into your IP address,Subject line
+Government,Voter registration confirmation,Email body
+Government,Health insurance premium update,Subject line
+Crypto,MetaMask: Security update required,Subject line
+Crypto,Trust Wallet: Verify your recovery phrase,Subject line
+Crypto,OpenSea: Offer received on your NFT,Subject line
+Crypto,Binance: New device login from [Location],Subject line
+Crypto,Ledger: Firmware update required,Subject line
+Crypto,Airdrop: Claim your free tokens,Email body
+Crypto,Wallet seed phrase backup needed,Email body
+Crypto,Your crypto withdrawal was successful,Subject line
+Crypto,Staking rewards ready to claim,Email body
+Crypto,Whale alert: Large movement in your wallet,Subject line
+IT/Admin,Mailbox quota exceeded,Subject line
+IT/Admin,Storage limit reached: Clean up now,Email body
+IT/Admin,Email delivery failure report,Subject line
+IT/Admin,Active Directory password expiring,Subject line
+IT/Admin,New VPN profile assigned,Email body
+IT/Admin,Domain name expiration notice,Subject line
+IT/Admin,Admin: Your account is being migrated,Subject line
+IT/Admin,System Maintenance: Login required,Subject line
+IT/Admin,Security certificate error on your PC,Subject line
+IT/Admin,Remote desktop access granted,Email body
+IT/Admin,Office 365: Global admin message,Subject line
+IT/Admin,SharePoint: Shared "Salary_Review.xlsx",Subject line
+IT/Admin,Yammer: You have new notifications,Subject line
+IT/Admin,ServiceDesk Ticket #4492 closed,Subject line
+IT/Admin,Quarantine: 3 messages blocked,Subject line
+IT/Admin,Release messages from quarantine,Call to action
+IT/Admin,Automatic reply: Out of office,Subject line
+IT/Admin,Policy Violation: Unauthorized software,Subject line
+IT/Admin,Intranet: Update your emergency contact,Subject line
+Legal,Confidentiality Agreement for signature,Subject line
+Legal,Subpoena for records,Subject line
+Legal,Settlement offer regarding [Case],Subject line
+Legal,Trademark infringement notice,Email body
+Legal,Copyright claim against your website,Subject line
+Legal,Digital Millennium Copyright Act (DMCA) notice,Subject line
+Legal,Power of attorney document,Email body
+Legal,Divorce papers: Action required,Subject line
+Legal,Estate planning documents attached,Subject line
+Legal,Contract termination notice,Subject line
+Urgency,Security Threat Detected: Scan Now,Subject line
+Urgency,Access will be denied in 2 hours,Email body
+Urgency,Final attempt to reach you,Subject line
+Urgency,Account deletion in progress,Subject line
+Urgency,Disruption in service imminent,Email body
+Urgency,Immediate review of terms required,Subject line
+Urgency,Your subscription expires today,Subject line
+Urgency,Urgent: Blood donor needed (Social),Subject line
+Urgency,Safety Alert: Change your password,Subject line
+Urgency,Action needed: Avoid legal fees,Email body
+Social,Facebook: Someone tried to login,Subject line
+Social,Instagram: You were tagged in a photo,Subject line
+Social,Twitter/X: Password reset request,Subject line
+Social,Snapchat: New friend suggestion,Subject line
+Social,Tinder: You have a new match,Subject line
+Social,WhatsApp: Group invite from [Number],Subject line
