@@ -1,73 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 1. Initial Load of Counts
-    updateDisplayCounts();
+    // 1. Initial Load of Counts when popup opens
+    updateLiveCounts();
 
-    const scanBtn = document.getElementById('scanBtn');
-    
-    if (scanBtn) {
-        scanBtn.addEventListener('click', async () => {
-            const status = document.getElementById('status');
-            const results = document.getElementById('results');
-            
-            status.innerText = "Extracting...";
-            scanBtn.disabled = true;
+    // 2. Optional: Set an interval to refresh counts while popup is open
+    // (Helpful if Gmail is still scanning in the background)
+    const refreshInterval = setInterval(updateLiveCounts, 1000);
 
-            try {
-                const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-                
-                chrome.tabs.sendMessage(tab.id, { action: "scanEmail" }, async (response) => {
-                    if (!response) {
-                        status.innerText = "Error: Refresh Gmail and try again.";
-                        scanBtn.disabled = false;
-                        return;
-                    }
-
-                    status.innerText = "AI Analyzing...";
-                    results.classList.remove('hidden');
-                    document.getElementById('sender').innerText = response.sender;
-                    document.getElementById('preview').innerText = response.text;
-
-                    const apiRes = await fetch("http://127.0.0.1:5000/api/classify", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ sender_email: response.sender, text: response.text })
-                    });
-                    
-                    const data = await apiRes.json();
-                    const label = data.label.toLowerCase();
-
-                    // Update UI
-                    const v = document.getElementById('verdict');
-                    v.innerText = label.toUpperCase();
-                    v.className = `label ${label}`;
-                    document.getElementById('reason').innerText = data.reason;
-
-                    // Update Storage Counters
-                    chrome.storage.local.get([label], (result) => {
-                        let count = (result[label] || 0) + 1;
-                        chrome.storage.local.set({ [label]: count }, () => {
-                            updateDisplayCounts();
-                        });
-                    });
-
-                    status.innerText = "Done.";
-                    scanBtn.disabled = false;
-                });
-            } catch (err) {
-                status.innerText = "Connection Error.";
-                scanBtn.disabled = false;
-            }
-        });
-    }
+    // Clean up interval when popup closes
+    window.addEventListener('unload', () => clearInterval(refreshInterval));
 });
 
-function updateDisplayCounts() {
-    chrome.storage.local.get(['phishing', 'suspicious', 'safe'], (res) => {
-        if (document.getElementById('cnt-phishing')) 
-            document.getElementById('cnt-phishing').innerText = res.phishing || 0;
-        if (document.getElementById('cnt-suspicious')) 
-            document.getElementById('cnt-suspicious').innerText = res.suspicious || 0;
-        if (document.getElementById('cnt-safe')) 
-            document.getElementById('cnt-safe').innerText = res.safe || 0;
+function updateLiveCounts() {
+    // 1. Find the active Gmail tab
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        if (tabs[0]?.id) {
+            // 2. Send message to content.js to get the count of badges on screen
+            chrome.tabs.sendMessage(tabs[0].id, { action: "GET_COUNTS" }, (response) => {
+                if (chrome.runtime.lastError) {
+                    // Silently fail if not on a valid Gmail page
+                    return;
+                }
+
+                if (response) {
+                    // 3. Update the UI Counters
+                    const phishElem = document.getElementById('cnt-phishing');
+                    const suspElem = document.getElementById('cnt-suspicious');
+                    const safeElem = document.getElementById('cnt-safe');
+
+                    if (phishElem) phishElem.innerText = response.phishing || 0;
+                    if (suspElem) suspElem.innerText = response.suspicious || 0;
+                    if (safeElem) safeElem.innerText = response.safe || 0;
+                }
+            });
+        }
     });
 }

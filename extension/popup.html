@@ -2,19 +2,16 @@
 <html>
 <head>
     <style>
-        body { font-family: sans-serif; width: 320px; padding: 15px; background: #fdfdfd; }
-        .label { font-weight: bold; padding: 4px; border-radius: 4px; color: white; display: inline-block; margin-top: 5px;}
-        .phishing { background: #e74c3c; } .suspicious { background: #f39c12; } .safe { background: #2ecc71; }
+        body { font-family: 'Segoe UI', sans-serif; width: 300px; padding: 15px; background: #fdfdfd; }
+        h3 { margin-top: 0; color: #333; border-bottom: 2px solid #eee; padding-bottom: 8px; }
         
-        /* NEW: Counter Styles */
-        .counter-container { display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+        /* Counter Styles */
+        .counter-container { display: flex; justify-content: space-between; margin-bottom: 15px; background: #fff; padding: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
         .counter-item { text-align: center; flex: 1; }
-        .counter-num { display: block; font-size: 18px; font-weight: bold; }
-        .counter-label { font-size: 10px; text-transform: uppercase; color: #666; }
+        .counter-num { display: block; font-size: 22px; font-weight: bold; }
+        .counter-label { font-size: 10px; text-transform: uppercase; color: #888; letter-spacing: 0.5px; }
         
-        #status { color: #666; font-size: 12px; margin: 10px 0; }
-        pre { background: #eee; padding: 8px; font-size: 11px; max-height: 100px; overflow: auto; border-radius: 4px; }
-        .hidden { display: none; }
+        .status-text { text-align: center; color: #666; font-size: 12px; margin-top: 10px; font-style: italic; }
     </style>
 </head>
 <body>
@@ -25,7 +22,7 @@
             <span id="cnt-phishing" class="counter-num" style="color: #e74c3c;">0</span>
             <span class="counter-label">Phishing</span>
         </div>
-        <div class="counter-item">
+        <div class="counter-item" style="border-left: 1px solid #eee; border-right: 1px solid #eee;">
             <span id="cnt-suspicious" class="counter-num" style="color: #f39c12;">0</span>
             <span class="counter-label">Suspicious</span>
         </div>
@@ -35,16 +32,8 @@
         </div>
     </div>
 
-    <button id="scanBtn" style="width: 100%; padding: 10px; cursor: pointer;">Analyze Email</button>
-    
-    <div id="status">Ready.</div>
-    
-    <div id="results" class="hidden">
-        <div><strong>Sender:</strong> <span id="sender"></span></div>
-        <div id="verdict" class="label"></div>
-        <p id="reason" style="font-size: 13px;"></p>
-        <pre id="preview"></pre>
-    </div>
+    <div class="status-text">Monitoring active Gmail tab...</div>
+
     <script src="popup.js"></script>
 </body>
 </html>
