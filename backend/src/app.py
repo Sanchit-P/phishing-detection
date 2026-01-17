@@ -2,9 +2,9 @@ import os
 import json
 import csv
 from flask import Flask, jsonify, request
-from flask_cors import CORS
-from dotenv import load_dotenv
-from groq import Groq
+from flask_cors import CORS # type: ignore
+from dotenv import load_dotenv # type: ignore
+from groq import Groq # type: ignore
 
 load_dotenv()
 app = Flask(__name__)
@@ -96,16 +96,24 @@ def local_keyword_scan(text):
 
 # 3. AI Analysis Logic
 PROMPT_TEMPLATE = """
-Analyze this email for phishing. 
-SENDER ADDRESS: {sender}
-EMAIL CONTENT: {email_content}
+Act as a Senior Cyber Security Analyst specializing in Phishing Detection.
+Analyze the following email metadata and content for malicious intent.
 
-Return JSON ONLY.
+SENDER: {sender}
+CONTENT: {email_content}
+
+CHECKLIST FOR ANALYSIS:
+1. SENDER REPUTATION: Does the sender address look spoofed or use a look-alike domain?
+2. URGENCY & THREATS: Does it use "fear-ware" tactics (e.g., "Account locked", "Legal action")?
+3. CALL TO ACTION: Is there a suspicious link or a request for sensitive info (PII)?
+4. GRAMMAR/STYLE: Are there unusual errors or generic salutations like "Dear Customer"?
+
+Return your final assessment in JSON format ONLY. 
 JSON FORMAT:
 {{
   "label": "phishing", "suspicious", or "safe",
-  "reason": "1-sentence explanation of why it is flagged or safe",
-  "confidence": 0.0
+  "reason": "Provide a concise explanation based on the checklist above.",
+  "confidence": 0.0 to 1.0
 }}
 """
 
